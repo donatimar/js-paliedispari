@@ -19,13 +19,20 @@ function isEvenOrOdd(number) {
   return number % 2 === 0 ? "pari" : "dispari";
 }
 
-// esprimo le variabili
+// scegli pari o dispari e un numero da 1 a 5
 const userChoice = prompt("Scegli 'pari' o 'dispari'");
 const userNumber = parseInt(prompt("Inserisci un numero da 1 a 5"));
 
-// scegli pari o dispari
-// scegli un numero da 1 a 5
-// genero un numero da 1 a 5 per il computer
+// verifico che gli input immessia siano corretti
+if (userChoice !== "pari" && userChoice !== "dispari") {
+  console.error("Devi scegliere 'pari' o 'dispari'");
+} else if (isNaN(userNumber) || userNumber < 1 || userNumber > 5) {
+  console.error("Il numero deve essere un valore compreso tra 1 e 5");
+} else {
+  // genero un numero da 1 a 5 per il computer
+  const computerNumber = generateRandomNumber();
+  console.log("Numero del computer:", computerNumber);
+}
 // sommo il numero dell'utente con il numero del computer
 // determino se la somma è pari o dispari
 // dichiaro chi ha vinto
