@@ -36,6 +36,10 @@ if (userChoice !== "pari" && userChoice !== "dispari") {
   // sommo il numero dell'utente con il numero del computer
   const sum = userNumber + computerNumber;
   console.log("Somma dei numeri dell'utente e del computer", sum);
+
   // determino se la somma è pari o dispari
+  const sumEvenorOdd = isEvenOrOdd(sum);
+  console.log("La somma è:", sumEvenorOdd);
+
   // dichiaro chi ha vinto
 }
