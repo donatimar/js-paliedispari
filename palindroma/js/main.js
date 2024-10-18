@@ -19,9 +19,11 @@ function checkPalindrome(userWord, reversedWord) {
   }
   console.log("Parola invertita:", reversedWord);
 
+  // se le due var sono identiche allora la parola è palindroma
   if (reversedWord === userWord) {
     console.log("La parola è palindroma");
     alert("La parola è palindroma");
+    // se le due var sono diverse allora la parola non è palindroma
   } else {
     console.log("La parola non è palindroma");
     alert("La parola non è palindroma");
