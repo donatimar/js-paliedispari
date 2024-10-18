@@ -18,7 +18,11 @@ function generateRandomNumber() {
 function isEvenOrOdd(number) {
   return number % 2 === 0 ? "pari" : "dispari";
 }
+
 // esprimo le variabili
+const userChoice = prompt("Scegli 'pari' o 'dispari'");
+const userNumber = parseInt(prompt("Inserisci un numero da 1 a 5"));
+
 // scegli pari o dispari
 // scegli un numero da 1 a 5
 // genero un numero da 1 a 5 per il computer
