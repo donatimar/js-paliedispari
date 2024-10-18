@@ -10,7 +10,14 @@ Dichiariamo chi ha vinto.
 */
 
 // funzione per scegliere pari o dispari
+function generateRandomNumber() {
+  return Math.floor(Math.random() * 5) + 1;
+}
+
 // funzione per generare un numero da 1 a 5
+function isEvenOrOdd(number) {
+  return number % 2 === 0 ? "pari" : "dispari";
+}
 // esprimo le variabili
 // scegli pari o dispari
 // scegli un numero da 1 a 5
