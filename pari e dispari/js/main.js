@@ -21,7 +21,9 @@ function isEvenOrOdd(number) {
 
 // scegli pari o dispari e un numero da 1 a 5
 const userChoice = prompt("Scegli 'pari' o 'dispari'");
+console.log("Scelta dell'utente:", userChoice);
 const userNumber = parseInt(prompt("Inserisci un numero da 1 a 5"));
+console.log("Numero dell'utente", userNumber);
 
 // verifico che gli input immessi siano corretti
 if (userChoice !== "pari" && userChoice !== "dispari") {
@@ -31,23 +33,28 @@ if (userChoice !== "pari" && userChoice !== "dispari") {
 } else {
   // genero un numero da 1 a 5 per il computer
   const computerNumber = generateRandomNumber();
-  console.log("Numero del computer:", computerNumber);
+  console.log("Numero del computer", computerNumber);
 
   // sommo il numero dell'utente con il numero del computer
   const sum = userNumber + computerNumber;
   console.log("Somma dei numeri dell'utente e del computer", sum);
 
   // determino se la somma è pari o dispari
-  const sumEvenorOdd = isEvenOrOdd(sum);
-  console.log("La somma è:", sumEvenorOdd);
+  const sumEvenOrOdd = isEvenOrOdd(sum);
+  console.log("La somma è:", sumEvenOrOdd);
 
   // dichiaro chi ha vinto
+  let resultMessage;
   if (
-    (userChoice === "pari" && sumEvenorOdd === "pari") ||
-    (userChoice === "dispari" && sumEvenorOdd === "dispari")
+    (userChoice === "pari" && sumEvenOrOdd === "pari") ||
+    (userChoice === "dispari" && sumEvenOrOdd === "dispari")
   ) {
-    console.log("L'utente vince");
+    resultMessage = "L'utente vince";
   } else {
-    console.log("L'utente perde");
+    resultMessage = "L'utente perde";
   }
+
+  // mostro il risultato finale
+  alert(resultMessage);
+  console.log(resultMessage);
 }
