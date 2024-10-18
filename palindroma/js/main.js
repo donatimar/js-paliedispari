@@ -10,15 +10,21 @@ function isPalindrome() {
   let userWord = prompt("Inserisci la parola");
   let reversedWord = "";
 
+  console.log("Parola inserita:", userWord);
+
   function checkPalindrome(userWord, reversedWord) {
     for (let i = userWord.length - 1; i >= 0; i--) {
       reversedWord += userWord[i];
     }
 
+    console.log("Parola invertita:", reversedWord);
+
     if (reversedWord === userWord) {
-      alert("La parola è Palindroma");
+      console.log("La parola è palindroma");
+      alert("La parola è palindroma");
     } else {
-      alert("La parola non è Palindroma");
+      console.log("La parola non è palindroma");
+      alert("La parola non è palindroma");
     }
   }
   checkPalindrome(userWord, reversedWord);
