@@ -42,4 +42,12 @@ if (userChoice !== "pari" && userChoice !== "dispari") {
   console.log("La somma è:", sumEvenorOdd);
 
   // dichiaro chi ha vinto
+  if (
+    (userChoice === "pari" && sumEvenorOdd === "pari") ||
+    (userChoice === "dispari" && sumEvenorOdd === "dispari")
+  ) {
+    console.log("L'utente vince");
+  } else {
+    console.log("L'utente perde");
+  }
 }
